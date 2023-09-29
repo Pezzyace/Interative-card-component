@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles/design.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+  <div class="container">
+    <section class="container-left">
+      <div class="cardFront">
+        <div class="top">
+          <div class="bank-logo"></div>
+          <div class="logo1"></div>
+        </div>
+        <div class="bottom">
+          <p class="serial-number">0000 0000 0000 0000</p>
+          <div class="details">
+            <p class="card-name">Jane Appleseed</p>
+            <p class="card-expiry-date">00/00</p>
+          </div>
+        </div>
+      </div>
+      <div class="cardBack">
+        <p class="card-cvc">000</p>
+      </div>
+    </section>
+    <section class="container-right">
+      <div class="card-details-container">
+        <form action="" class="card-form">
+          <label for="cardHolderName">Cardholder Name</label>
+          <input type="text" name="cardHolderName" class="cardHolderName" id="cardHolderName" placeholder="e.g. Jane Appleseed">
+          <label for="cardNumber">Card Number</label>
+          <input type="text" name="cardNumber" class="cardNumber" id="cardNumber" maxlength="20" placeholder="e.g. 1234 5678 9123 0000">
+          <section class="details">
+            <div class="exp-date-wrapper">
+              <label for="date" class="exp">Exp. Date (MM/YY)</label>
+              <div class="date-input">
+                <input type="text" name=""  class="date" id="date" maxlength="2" placeholder="MM">
+                <input type="text" name="date"  class="date" id="date" maxlength="2" placeholder="YY">
+              </div>
+            </div>
+            <div class="cvc-wrapper">
+              <label for="cvc">CVC</label>
+              <input type="text" name="" class="cvc" id="cvc" maxlength="3" placeholder="e.g. 123">
+            </div>
+          </section>
+          <input type="button" value="Confirm" class="submitBtn" id="submitBtn">
+        </form>
+      </div>
+      <!-- Completed state start -->
+      <div class="completed-state-container">
+        <img src="images/icon-complete.svg" alt="">
+        <p class="thankYou">Thank you!</p>
+        <p class="congulatory-message">We've added your card details</p>
+        <input type="button" value="Continue" class="confirm" id="completed-state-confirm">
+      </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </section>
+  </div>
+</body>
+</html>

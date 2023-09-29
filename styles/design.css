@@ -1,0 +1,203 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
+.container{
+  display: flex;
+  height: auto;
+}
+.container-left{
+  width: 30%;
+  background-image: url(../images/bg-main-desktop.png);
+  background-size: cover;
+  position: relative;
+}
+.cardFront, .cardBack{
+  position: absolute;
+}
+.cardFront{
+  background-image: url(../images/bg-card-front.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 350px;
+  top: 100px;
+  left: 150px;
+  padding: 20px 25px;
+  z-index: 10;
+}
+.cardBack{
+  background-image: url(../images/bg-card-back.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 350px;
+  top: 320px;
+  left: 220px
+}
+.top{
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.bank-logo{
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: hsl(0, 0%, 100%);
+  margin-right: 10px;
+}
+.logo1{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid hsl(270, 3%, 87%);
+}
+.serial-number{
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 20px;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.bottom .details{
+  display: flex;
+  justify-content: space-between
+}
+.card-name, .card-expiry-date{
+  color: white;
+  font-size: 13px;
+}
+.cardBack{
+  position: relative;
+}
+.card-cvc{
+  position: absolute;
+  top: 85px;
+  right: 42px;
+  font-size: 13px;
+  color:  hsl(270, 3%, 87%);
+  font-weight: 700;
+}
+.container-right{
+  width: 70%;
+}
+.card-form{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 30%;
+  margin-top: 170px;
+  margin-bottom: 100px;
+}
+label{
+  font-size: 11px;
+  margin-bottom: 5px;
+  color: hsl(278, 68%, 11%);
+  text-transform: uppercase;
+}
+.exp-date-wrapper, .cvc-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.cardHolderName, .cardNumber{
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid hsl(278, 68%, 11%);
+}
+.cardHolderName:focus{
+  outline-color: hsl(278, 68%, 11%);
+  outline-width: 1px;
+}
+.details{
+  display: flex;
+  margin-bottom: 20px;
+}
+.date-input{
+  display: flex;
+}
+.date{
+  width: 30%;
+  padding: 10px 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid hsl(278, 68%, 11%);
+}
+.cvc{
+  width: 70%;
+  padding: 10px 5px;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid hsl(278, 68%, 11%);
+}
+.submitBtn{
+  padding: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+}
+.completed-state-container{
+  display:none;
+}
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  margin-bottom: 120px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+@media (max-width: 375px){
+  .container{
+    flex-direction: column
+  }
+  .container-left{
+    background-image: url(../images/bg-main-mobile.png);
+    width: 100%;
+  }
+  .container-right{
+    margin: 0 auto;
+    width: 100%;
+  }
+  .cardFront{
+    top: 104px;
+    left: 25px;
+    width: 270px;
+  }
+  .top{
+    margin-bottom: 30px;
+  }
+  .serial-number{
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  .cardBack{
+    top: 20px;
+    left: 80px;
+    width: 270px;
+  }
+  .card-form{
+    width: 100%;
+    margin: 80px 0px 10px 0px;
+  }
+  .card-details-container{
+    width: 70%;
+    margin: 0 auto;
+  }
+  .card-cvc{
+    top: 64px;
+    right: 30px;
+  }
+  .attribution{
+    margin-bottom: 0px;
+  }
+  .botttom .details{
+    margin: 0;
+  }
+}

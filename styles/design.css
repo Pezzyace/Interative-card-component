@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Space Grotesk', sans-serif;
+  outline: none; 
 }
 .container{
   display: flex;
@@ -13,6 +14,7 @@
   background-image: url(../images/bg-main-desktop.png);
   background-size: cover;
   position: relative;
+  height: 100vh;
 }
 .cardFront, .cardBack{
   position: absolute;
@@ -61,11 +63,15 @@
   font-size: 20px;
   letter-spacing: 3px;
 }
-.bottom .details{
+.bottom .details {
   display: flex;
   justify-content: space-between
 }
-.card-name, .card-expiry-date{
+.bottom .details .expiry-details{
+  display: flex;
+  gap: 3px;
+}
+.card-name, .card-expiry-month, .card-expiry-year, .slash{
   color: white;
   font-size: 13px;
 }
@@ -120,16 +126,15 @@ label{
 }
 .date{
   width: 30%;
-  padding: 10px 10px;
+  padding: 10px;
   margin-right: 10px;
   border-radius: 5px;
   border: 1px solid hsl(278, 68%, 11%);
 }
 .cvc{
   width: 70%;
-  padding: 10px 5px;
+  padding: 10px 10px;
   border-radius: 5px;
-  border: none;
   border: 1px solid hsl(278, 68%, 11%);
 }
 .submitBtn{
@@ -138,9 +143,32 @@ label{
   border-radius: 5px;
   background-color: hsl(278, 68%, 11%);
   color: white;
+  cursor: pointer;
 }
 .completed-state-container{
   display:none;
+  flex-direction: column;
+  margin: auto;
+  width: 30%;
+  margin-top: 170px;
+  margin-bottom: 100px;
+}
+.completed-state-container img{
+  width: 50px;
+  margin-bottom: 20px;
+}
+.completed-state-container p{
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.completed-state-container input{
+  padding: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
 }
 .attribution { 
   font-size: 11px; 
@@ -159,6 +187,7 @@ label{
   .container-left{
     background-image: url(../images/bg-main-mobile.png);
     width: 100%;
+    height: auto;
   }
   .container-right{
     margin: 0 auto;
@@ -173,9 +202,12 @@ label{
     margin-bottom: 30px;
   }
   .serial-number{
-    font-size: 20px;
+    font-size: 15px;
     letter-spacing: 2px;
     margin-bottom: 10px;
+  }
+  .card-name{
+    font-size: 11px;
   }
   .cardBack{
     top: 20px;
@@ -195,9 +227,14 @@ label{
     right: 30px;
   }
   .attribution{
-    margin-bottom: 0px;
+    margin-bottom: 10px;
   }
-  .botttom .details{
+  .bottom .details{
     margin: 0;
+  }
+  .completed-state-container{
+    width: 80%;
+    margin-top: 70px;
+    margin-bottom: 30px;
   }
 }

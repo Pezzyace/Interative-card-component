@@ -19,52 +19,59 @@
           <div class="logo1"></div>
         </div>
         <div class="bottom">
-          <p class="serial-number">0000 0000 0000 0000</p>
+          <p class="serial-number" id="cardSerialNumber">0000 0000 0000 0000</p>
           <div class="details">
-            <p class="card-name">Jane Appleseed</p>
-            <p class="card-expiry-date">00/00</p>
+            <p class="card-name" id="cardName">Jane Appleseed</p>
+            <div class="expiry-details">
+              <p class="card-expiry-month" id="card-expiry-month">00</p>
+              <p class="slash">/</p>
+              <p class="card-expiry-year" id="card-expiry-year">00</p>
+            </div>
           </div>
         </div>
       </div>
       <div class="cardBack">
-        <p class="card-cvc">000</p>
+        <p class="card-cvc" id="card-cvc">000</p>
       </div>
     </section>
     <section class="container-right">
-      <div class="card-details-container">
+      <div class="card-details-container" id="form">
         <form action="" class="card-form">
           <label for="cardHolderName">Cardholder Name</label>
-          <input type="text" name="cardHolderName" class="cardHolderName" id="cardHolderName" placeholder="e.g. Jane Appleseed">
+          <input type="text" name="cardHolderName" class="cardHolderName" id="card-holder-name" placeholder="e.g. Jane Appleseed" oninput="nameInput()">
+          <span id="cardHolderErrorMsg"></span>
           <label for="cardNumber">Card Number</label>
-          <input type="text" name="cardNumber" class="cardNumber" id="cardNumber" maxlength="20" placeholder="e.g. 1234 5678 9123 0000">
+          <input type="text" name="cardNumber" class="cardNumber" id="card-holder-number" placeholder="e.g. 1234 5678 9123 0000" oninput="numberInput(this)">
+          <span class="errorMsg" id="errorMsg"></span>
           <section class="details">
             <div class="exp-date-wrapper">
               <label for="date" class="exp">Exp. Date (MM/YY)</label>
               <div class="date-input">
-                <input type="text" name=""  class="date" id="date" maxlength="2" placeholder="MM">
-                <input type="text" name="date"  class="date" id="date" maxlength="2" placeholder="YY">
+                <input type="text" name=""  class="date" id="expiry-month" maxlength="2" placeholder="MM" oninput="expiryMonthInput(this)">
+                <input type="text" name="date"  class="date" id="expiry-year" maxlength="2" placeholder="YY" oninput="expiryYearInput(this)">
               </div>
             </div>
             <div class="cvc-wrapper">
               <label for="cvc">CVC</label>
-              <input type="text" name="" class="cvc" id="cvc" maxlength="3" placeholder="e.g. 123">
+              <input type="text" name="" class="cvc" id="cvc" maxlength="3" placeholder="e.g. 123" oninput="cvcInput(this)">
             </div>
           </section>
           <input type="button" value="Confirm" class="submitBtn" id="submitBtn">
         </form>
       </div>
       <!-- Completed state start -->
-      <div class="completed-state-container">
+      <div class="completed-state-container" id="thank-u-container">
         <img src="images/icon-complete.svg" alt="">
-        <p class="thankYou">Thank you!</p>
+        <p class="thankYou">Thank you! <span id="thankYouName"></span></p>
         <p class="congulatory-message">We've added your card details</p>
-        <input type="button" value="Continue" class="confirm" id="completed-state-confirm">
+        <input type="button" value="Continue" class="confirm" id="continue-btn">
       </div>
       <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Your Name Here</a>.
+        Coded by <a href="https://www.frontendmentor.io/profile/pezzyace">Akaehomen Peace</a>.
       </div>
     </section>
   </div>
+  <script src="main.js"></script>
 </body>
 </html>
